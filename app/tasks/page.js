@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Layout from '../components/Layout';
-import TaskForm from '../components/TaskForm';
-import TaskList from '../components/TaskList';
-import { isAuthenticated } from '../utils/auth';
+import Layout from '../../components/Layout';
+import TaskForm from '../../components/TaskForm';
+import TaskList from '../../components/TaskList';
+import { isAuthenticated } from '../../utils/auth';
 
 export default function Tasks() {
   const [editingTask, setEditingTask] = useState(null);

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import LoginForm from '../components/LoginForm';
-import { isAuthenticated } from '../utils/auth';
+import LoginForm from '../../components/LoginForm';
+import { isAuthenticated } from '../../utils/auth';
 
 export default function Login() {
   const router = useRouter();
