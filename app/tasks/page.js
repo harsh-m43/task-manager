@@ -1,5 +1,8 @@
+"use client";
+
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 import Layout from '../../components/Layout';
 import TaskForm from '../../components/TaskForm';
 import TaskList from '../../components/TaskList';
