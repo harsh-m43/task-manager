@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import TaskForm from '../../components/TaskForm';
 import TaskList from '../../components/TaskList';
 import { isAuthenticated } from '../../utils/auth';
+import { TaskProvider } from '../../context/TaskContext';
 
 export default function TasksPage() {
   const router = useRouter();
@@ -21,9 +22,11 @@ export default function TasksPage() {
   const handleCancelEdit = () => setEditingTask(null);
 
   return (
-    <Layout>
-      <TaskForm editingTask={editingTask} onCancel={handleCancelEdit} />
-      <TaskList onEdit={handleEdit} />
-    </Layout>
+    <TaskProvider>
+      <Layout>
+        <TaskForm editingTask={editingTask} onCancel={handleCancelEdit} />
+        <TaskList onEdit={handleEdit} />
+      </Layout>
+    </TaskProvider>
   );
 }

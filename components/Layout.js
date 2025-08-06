@@ -1,5 +1,5 @@
 import { logout } from '../utils/auth';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function Layout({ children }) {
   const router = useRouter();
